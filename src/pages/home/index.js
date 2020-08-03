@@ -6,21 +6,17 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 
-const AppWrapper = styled.div `
-  background: var(--grayDark);
-
-`;
-
 
 function Home() {
   return (
-    <AppWrapper style={{background: "#141414"}} >
+    <div style={{background: "#141414"}} >
        <Menu /> 
 
-      <bannerMain 
-          videoTitle={dadosIniciais.categorias[0].videos[0].titulo} 
-          url={dadosIniciais.categorias[0].videos.url} 
-          videoDescription={"O que é front-end? trabalhando na área os termos HTML, CSS e JS."}  />
+       <BannerMain
+        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
+        url={dadosIniciais.categorias[0].videos[0].url}
+        videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"}
+      />
 
      <Carousel ignoreFirstVideo category={dadosIniciais.categorias[0]} />
 
@@ -36,8 +32,7 @@ function Home() {
 
       <Footer />
 
-
-    </AppWrapper>
+    </div>
   );
 }
 
